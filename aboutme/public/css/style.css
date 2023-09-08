@@ -1,0 +1,73 @@
+.cookies{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-primary);
+    z-index: 2;
+    position: fixed;
+
+}
+.cookies-inside{
+    width: 600px;
+    height: 290px;
+    border: 3px dashed var(--accent);
+    background-color: var(--bg--secondary);
+    padding: 12px;
+}
+
+.card-title{
+    font-family: roboto;
+    padding: 5px 0 15px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--primary);
+    font-weight: 700;
+    font-size: 40px;
+}
+.cookies-inside>p{
+    text-align: center;
+    font-size: 16px;
+    color: var(--secondary);
+}
+.cardbtn{
+    color: white;
+    display: flex;
+    border: 1px dotted black;
+    height: 40px;
+    padding: 0 24px 0 24px;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+}
+#accept{
+    background-color: var(--accent);
+    color: var(--secondary);
+
+}
+#recuse{
+    color: var(--accent);
+    background-color: var(--secondary);
+}
+.btns{
+    margin: 20px 0;
+}
+
+.cookies.hidden{
+    display: none;
+}
+#video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.video{
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+}
