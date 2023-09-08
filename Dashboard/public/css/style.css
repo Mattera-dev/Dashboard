@@ -1,0 +1,295 @@
+.navbar {
+  display: flex;
+  position: relative;
+
+  background-color: var(--bg-secondary);
+  justify-content: space-evenly;
+}
+
+.navbar .nav-brand {
+  color: white;
+  margin: auto 0;
+  margin-right: 6rem;
+  margin-left: 1rem;
+  font-weight: 600;
+  font-size: 18px;
+
+}
+
+.nav-search {
+  position: relative;
+  display: block;
+  width: 100%;
+  background-color: var(--bg-secondary);
+}
+
+.nav-search input {
+  position: absolute;
+  width: 40px;
+  padding: calc(0.75rem - 1px) 5px;
+  padding-left: 35px;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px transparent solid;
+  box-sizing: border-box;
+  background-image: url("../imgs/lupa.png");
+  background-size: 20px 20px;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  transition: width 0.5s ease-in-out;
+  cursor: pointer;
+  right: 0;
+}
+.nav-search input:focus {
+  width: 100%;
+  background-color: var(--bg-third);
+  cursor: text;
+  border-color: white;
+}
+
+.nav-search input::placeholder {
+  color: var(--primary);
+}
+
+.nav-items {
+  display: flex;
+}
+
+.nav-items .nav-item {
+  padding: 10px;
+
+}
+.nav-items .nav-item2 a{
+    font-size: 14px;
+    width: 100%;
+  }
+
+.content{
+  position:relative;
+  height: 100%;
+  display: grid;
+  grid-template-areas: 
+  'sidebar cont cont cont'
+  'sidebar cont cont cont'
+  'sidebar cont cont cont';
+  gap: 20px;
+}
+.content h1{
+  font-size: 16px;
+}
+
+.sidebar{
+  display: flex;
+  padding-right: 40px;
+  grid-area: sidebar;
+  height: calc(100vh - 40px);
+  justify-content: center; 
+  background-color: var(--bg-secondary);
+  position: relative;
+  transition: .3s ease-in-out;
+  width: 100%;
+}
+
+
+.sidebar .sidebar-items{
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  width: 100%;
+  padding: 15px 2px;
+
+}
+
+.sidebar-items .sidebar-item{
+  padding: 5px 10px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 2.2;
+  border-bottom: 1px solid var(--bg-third);
+  text-align: left;
+  color: var(--primary);
+}
+
+a.sidebar-item.current-page{
+  color: var(--accent);
+
+
+}
+
+.sidebar-item-icon{
+ color: inherit;
+ float: left;
+ margin: 0px 5px;
+}
+
+.sidebar-button{
+  display: none;
+}
+
+.teste{
+  grid-area: cont;
+}
+
+.sidebar.show{
+  width: 100vw;
+  display: flex;
+
+}
+
+.teste.closed{
+  display: none;
+}
+
+
+.nav-item3{
+  color: white;
+  padding: 1px 1.5px;    
+  border-radius: 50%;
+ border: 1px solid white;
+  font-family:mifonte;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+
+}
+.burger{
+
+  width: 7px;
+  height: 1.2px;
+  background-color: white;
+  margin: 1px 0;
+
+}
+
+.burger.anim1{
+  transform: translateX(100px);
+  background-color: rgb(255, 255, 255);
+}
+.burger.anim2{
+  transform: rotate(405deg);
+  z-index: 1;
+  background-color: white;
+}
+.burger.anim3{
+  z-index: 1;
+  background-color: white;
+  transform:  translateY(-3.3px) rotate(-405deg);
+}
+
+.side-close{
+  position: absolute;
+  right: 0.3rem;
+  top: 1rem;
+  
+}
+.side-close>svg{
+  transition: .5s;
+  transform: rotate(180deg);
+}
+.side-close:hover svg{
+  transform: rotate(360deg);
+}
+
+
+#close-arrow.posi{
+  right: 0.3rem;
+  top: 1rem;
+}
+
+.side-minimize{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 1rem;
+  left: 0.5rem;
+}
+
+
+.sidebar.hide{
+  transform: translateX(-130px);
+}
+
+.side-sub-brand{
+  color: var(--primary);
+  font-size: 12px;
+  margin: 24px 0px 10px 15px;
+}
+
+.side-sub-item{
+  color: var(--secondary);
+  margin: 24px 0px 0px 16px;
+  cursor: pointer;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 700px){
+  .navbar{
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .nav-search input{
+    padding: calc(0.75rem - 1px) 5px;
+    padding-left: 35px;
+  }
+
+ .sidebar{
+  display: none;
+ }
+
+ .nav-item3{
+  display: flex;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  cursor: pointer;
+ }
+}
+
+@media screen and (min-width: 800px){
+  .navbar{
+    flex-direction: row;
+  }
+  .teste{
+    display: block;
+  }
+
+  .sidebar{
+    padding-right: 40px;
+    grid-area: sidebar;
+    height: calc(100vh - 40px);
+    justify-content: center; 
+    background-color: var(--bg-secondary);
+  }
+
+ 
+
+}
+
+
+
+
+
